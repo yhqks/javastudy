@@ -24,7 +24,21 @@ public class Preson {
 		this.name=name;
 		this.age=age;
 	}
+	public void fuck(String name) {
+		System.out.println(name);
+		
+	}
 	
-	
+	public int legth(String str) {
+		
+		return str.length();
+	}
+	private Preson (String name) {
+		this.name=name;
+	}
+	 public Preson() {super();}
+	 public static void main(String[] args) {
+		Preson p=new Preson("yks",15);
+	}
 
 }

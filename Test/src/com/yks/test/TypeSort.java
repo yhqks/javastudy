@@ -7,7 +7,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import org.junit.Test;
-
+//输入日期计算相差多少天
 public class TypeSort {
 	public static void main(String[] args) throws ParseException {
 

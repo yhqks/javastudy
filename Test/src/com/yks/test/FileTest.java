@@ -10,6 +10,11 @@ public class FileTest {
 	static int count=0;
 	static  int fild=0;
 	static  int fil=0;
+	
+	//输出某文件下所有的文件名 文件夹数 文件数  和总数
+	//fild 文件夹数
+	//fil  文件数
+	//count 总数
 //	public static void  findfile(File file) {
 //		File[]  f=file.listFiles();
 //	
@@ -30,13 +35,15 @@ public class FileTest {
 	public static void main(String[] args) {
 		
 		File file = new File("d:/text.txt");
-		
+	
+
 		
 //		findfile(file);
 //		System.out.println(count);
 //		System.out.println(fild);
 //		System.out.println(fil);
 		File file1 = new File("d:/text2.txt");
+		//try 新用法 在括号里面的资源可以自动关闭
 		try(
 				FileInputStream in =new FileInputStream(file);
 				FileOutputStream out = new FileOutputStream(file1,true);
@@ -53,6 +60,8 @@ public class FileTest {
 //			String str = new String(b);
 //			FileWriter fw = new FileWriter(file);
 
+			
+			//文件复制 边读边写 
 			int ch=-1;
 			 while((ch=in.read())!=-1)
 				 out.write(ch);

@@ -15,20 +15,27 @@ public class FullArray {
      
      
  }
-	
+	//对于一个数组进行全排序 并输出所有结果 和总数
 	public static void set(int[] array,int start) {
+		
+		//当数组的start为最后的数字时无法交换  此时的数组为一种情况
 		if(start==array.length-1) {
 			for(int i=0;i<=9;i++) {
 		    	 System.out.print(array[i]);
 		     }
 			System.out.println();
+			//总数加1
 			count++;
 		
 		}
 		else {
+			
 			for(int i=start;i<=9;i++) {
+				//交换现在数组的起始数字和第i个
 				swap(array,start,i);
+				//将现在数组的起始+1递归
 				set(array,start+1);
+				//交换回来数组的起始数字和第i个
 				swap(array,i,start);
 			
 				

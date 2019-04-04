@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
+//通过反射获得类的信息 并且通过反射实例化一个类
 public class getclass {
 
 	public static void main(String[] args) {
